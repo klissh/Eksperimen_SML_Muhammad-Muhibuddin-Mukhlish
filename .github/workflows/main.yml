@@ -9,15 +9,17 @@ on:
 
 jobs:
   preprocess-data:
-    # Tipe runner/mesin virtual yang akan digunakan
+    # TAMBAHKAN DUA BARIS INI
+    permissions:
+      contents: write
+    # BARIS SELANJUTNYA TETAP SAMA
     runs-on: ubuntu-latest
-
     steps:
-      # Langkah 1: Mengunduh kode dari repository ke runner
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          lfs: true # <-- TAMBAHKAN BLOK 'with' DAN BARIS INI
+          lfs: true
+      # ... sisa workflow tetap sama # <-- TAMBAHKAN BLOK 'with' DAN BARIS INI
 
       # Langkah 2: Menyiapkan lingkungan Python
       - name: Set up Python
