@@ -16,6 +16,8 @@ jobs:
       # Langkah 1: Mengunduh kode dari repository ke runner
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          lfs: true # <-- TAMBAHKAN BLOK 'with' DAN BARIS INI
 
       # Langkah 2: Menyiapkan lingkungan Python
       - name: Set up Python
